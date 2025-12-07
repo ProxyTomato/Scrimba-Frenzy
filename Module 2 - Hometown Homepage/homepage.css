@@ -1,0 +1,147 @@
+:root{
+	--dark-green: #097850;
+	--mint: #6fbca4;
+	--light-green: #92c4b4;
+	--golden: #fcbc01;
+	--white: #FFF;
+	--black: black;
+}
+
+body{
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.dark-green{
+	color: var(--dark-green);
+}
+.mint{
+	color: var(--mint);
+}
+.light-green{
+	color: var(--light-green);
+}
+.banner{
+	position: sticky;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	min-width: 1000px;
+	height: 60px;
+	background: var(--white);
+	z-index: 1;
+}
+
+header{
+	margin: 10px auto;
+	width: 80%;
+	min-width: 800px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#header-logo{
+	width:48px;
+}
+
+.navigate-wrapper{
+	padding: 8px 16px;
+	border: 2px solid var(--dark-green);
+	border-radius: 32px;
+}
+.navigate-wrapper ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+
+}
+
+.navigate-wrapper ul li{
+	margin: 0 16px;
+}
+
+.navigate-wrapper ul li:after{
+	margin-top: 8px;
+	content: url("Images/chevron-down.svg");
+}
+
+.navigate-wrapper ul li:hover{
+	color: var(--mint);
+}
+
+.navigate-wrapper ul li:hover:after{
+	content: url("Images/chevron-up.svg");
+	filter: invert(67%) sepia(44%) saturate(301%) hue-rotate(110deg) brightness(92%) contrast(91%);
+}
+
+.navigate-wrapper ul 
+input{
+	display: none;
+}
+
+.dropdown{
+	display:none;
+}
+
+/*destination design zone*/
+.destination-menu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.destination-selector{
+	padding: 16px;
+	padding-top: 24px;
+	margin: 0 auto;
+	border-radius: 16px;
+	box-shadow: 0px 0px 5px black;
+}
+
+.destination-selector ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+
+}
+
+.destination-selector ul li{
+	margin: 0 16px;
+	border-bottom: 8px solid transparent;
+}
+
+.destination-selector ul li:hover{
+	color: var(--mint);
+	border-bottom: 8px solid var(--mint);
+}
+
+.description{
+	position: absolute;
+	top: 150px;
+	left: 50%;
+}
+.destination-menu h1{
+	color: var(--golden);
+}
+
+.images-slide{
+	display: flex;
+	flex-direction: row;
+}
+
+.images-slide img{
+	display: block;
+	border: 1px solid black;
+	padding: 4px;
+	width: 360px;
+	height: 400px;	
+	border: none;
+	border-radius: 25px;
+	overflow: hidden;
+}
