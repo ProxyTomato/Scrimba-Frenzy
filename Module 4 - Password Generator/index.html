@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<script defer="true" src="index.js"></script>
+		<title>Password Generator</title>
+	</head>
+	<body>
+		<div id="password-generator-container">
+			<h1>Generate a</h1>
+			<h1 class="highlight">random passwords</h1>
+			<h2>never use an insecure password again.</h2>
+			<hr>
+			<div id="scaler-wrapper">
+				<h2>Password Length</h2>
+				<div id="password-length-input-wrapper">
+					<input type="range" id="password-length-range" min="8" max="20" value="16">
+					<input type="text" id="password-length-text">
+				</div>
+			</div>
+			<hr>
+			<div id="character-used">
+				<h2>Characters Used</h2>
+				<ul>
+					<li>
+						<input type="checkbox" id="uppercase-checkbox" name="characters-checkbox" checked>
+						<label for="uppercase"><p>Uppercase</p></label>
+					</li>
+					<li>
+						<input type="checkbox" id="lowercase-checkbox" name="characters-checkbox" checked>
+						<label for="lowercase"><p>Lowercase</p></label>
+					</li>
+					<li>
+						<input type="checkbox" id="number-checkbox" name="characters-checkbox">
+						<label for="numbers"><p>Numbers</p></label>
+					</li>
+					<li>
+						<input type="checkbox" id="symbol-checkbox" name="characters-checkbox">
+						<label for="symbol"><p>symbol</p></label>
+					</li>
+				</ul>
+			</div>
+			<hr>
+			<div id="password-container">
+				<div class="password-display">
+					<p id="password-1">a<p>
+					<button id="password-copy-btn-1">Copy password</button>
+				</div>
+				<div class="password-display">
+					<p id="password-2">a<p>
+					<button id="password-copy-btn-2">Copy password</button>
+				</div>
+			</div>
+			<hr>
+			<button id="generate-password-btn">Generator new password</button>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,117 @@
+:root{
+	--text-colour: #00b493;
+	--background-colour: #000F4B;
+	--highlight-colour: #D11C54;
+	--button-background-colour: #000725;
+	--container-width: 800px;
+}
+
+body{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--button-background-colour);
+}
+
+#password-generator-container{
+	font-family: 'Courier New', monospace;
+	width: var(--container-width);
+	height: calc(var(--container-width) / 2);
+	color: var(--text-colour);
+	background-color: var(--background-colour);
+	box-shadow: 0 0 8px var(--text-colour);
+	padding: 16px;
+}
+
+.highlight{
+	color: var(--highlight-colour);
+}
+
+h1{
+	font-size: 48px;
+	font-weight: bold;
+	margin: 0;
+}
+
+h2{
+	margin: 0;
+	font-size: 16px;
+}
+
+hr{
+	color: var(--text-colour);
+}
+
+#scaler-wrapper{
+	display: flex;
+	padding: 8px 0;
+	width: var(--container-width);
+	justify-content: space-between;
+	align-items: center;
+}
+
+#password-length-input-wrapper{
+	display: flex;
+}
+
+#password-length-text{
+	width: 32px;
+	border-radius: 8px;
+	text-align: center;
+	background-color: var(--button-background-colour);
+	color: var(--text-colour);
+	border-color: var(--text-colour);
+}
+
+#character-used{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+ul{
+	display: flex;
+	margin: 0;
+	gap: 8px;
+	list-style: none;
+}
+
+li{
+	display: flex;
+}
+
+#password-container{
+	display: flex;
+	justify-content: space-around;
+}
+
+.password-display{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 4px;
+	padding: 0 8px;
+	background-color: var(--button-background-colour);
+	width: calc(var(--container-width) * 3 / 8);
+	height: calc(var(--container-width)  / 16);
+}
+
+.password-display button{
+	padding: 4px;
+}
+
+button{
+	border: 0;
+	border-radius: 4px;
+	font-weight: bold;
+	background-color: var(--highlight-colour);
+	color: whitesmoke;
+}
+
+#generate-password-btn{
+	font-size: 24px;
+	font-weight: bold;
+	width: var(--container-width);
+	height: calc(var(--container-width)  / 16);
+}
