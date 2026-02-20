@@ -1,0 +1,100 @@
+@font-face{
+  font-family: "Inter";
+  src: url(font-family/Inter/Inter-VariableFont_opsz,wght.ttf);
+}
+
+:root{
+	--container-width: 550px;
+	--header-height: 285px;
+	--header-font-colour: #FFFFFF;
+	--header-background-colour: #6943FF;
+	--input-el-border-colour: #B295FF;
+	--convert-btn-font-colour: #5A537B;
+	--card-background-colour: light-dark(#FFFFFF, #273549);
+	--card-container-background-color: light-dark(#F4F4F4, #1F2937);
+	--card-title-font-colour: light-dark(#5A537B, #CCC1FF);
+	--output-font-colour: light-dark(#353535, #FFFFFF);
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--card-background-colour);
+	font-family: "Inter";
+	height: 100vh;
+}
+
+.card-container{
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: var(--container-width);
+	height: var(--header-height);
+	background-color: var(--header-background-colour);
+	color: var(--header-font-colour);
+}
+
+h1{
+	font-size: 28px;
+	margin-bottom: 0;
+	font-weight: 800;
+}
+
+#input-el{
+	width: 120px;
+	text-align: center;
+	background-color: transparent;
+	border: 2px solid var(--input-el-border-colour);
+	border-radius: 5px;
+	color: inherit;
+	font-size: 58px;
+	font-weight: 800;
+}
+
+#convert-btn{
+	width: 117px;
+	height: 42px;
+	background-color: var(--header-font-colour);
+	color: var(--card-title-font-colour);
+	border-radius: 5px;
+	border-color: transparent;
+	font-size: 16px;
+	font-weight: 500px;
+}
+#card-wrapper{
+	width: var(--container-width);
+	display: flex;
+	flex-direction: column;
+	background-color: var(--card-container-background-color);
+	justify-content: center;
+	align-items: center;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	height: 100px;
+	margin: 20px 0;
+	background-color: var(--card-background-colour);
+}
+
+.card > h2{
+	margin: 0;
+	color: var(--card-title-font-colour);
+}
+
+.card > p{
+	margin: 0;
+	color: var(--output-font-colour);
+}
