@@ -54,7 +54,7 @@ function postTemplate(info){
                 <strong>${info.username}</strong> ${info.comment}
             </div>
           </div>
-    `;
+    `
 }
 for(let i  =0; i < posts.length; i++){
     postElm.innerHTML += postTemplate(posts[i]);
