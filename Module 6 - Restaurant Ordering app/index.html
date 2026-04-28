@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jimmy's Diner</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"  defer="defer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app" id="app">
+        <section class="order-section" id="order-section">
+            <img src="images/header.png" class="app-header"
+                 alt="Image of burger from Jimmy's Diner with tagline the best burgers and pizzas in town.">
+            <menu id = "menu"></menu>
+        <div class="order-container" id="order-container">
+            <h1 class="order-header">Your Order</h1>
+            <div class="order-info" id="order-info"></div>
+            <button id="complete-btn">Complete Order</button>
+        </div>
+        </section>
+        <form class="card-details-popup" id="card-details-popup">
+            <h1 class="card-details-popup-title">Enter card details</h1>
+            <div class="input-list">
+                <input type="text" name="name" placeholder="Enter your name" aria-label="customer's name" required>
+                <input
+                        type="text"
+                        name="cardNumber"
+                        placeholder="Enter card number"
+                        aria-label="customer's cardNumber"
+                        pattern="[0-9]{12}"
+                        required
+                >
+                <input
+                        type="text"
+                        name="cvv"
+                        placeholder="Enter CVV"
+                        pattern="[0-9]{3}[0-9]?"
+                        aria-label="customer's CVV"
+                        required
+                >
+            </div>
+            <button id="pay-btn">Pay</button>
+        </form>
+        <div class="thank-you-popup" id="thank-you-popup"></div>
+    </div>
+</body>
+</html>

@@ -35,6 +35,7 @@ header {
 #post{
     margin: 0 auto;
     width: var(--post-size);
+    background-color: white;
 }
 
 .post-header{
