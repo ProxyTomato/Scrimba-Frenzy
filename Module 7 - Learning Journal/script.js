@@ -9,7 +9,7 @@ const getBlogCardListHTML = function () {
     let contentHTML = `<div class="blog-card-list">`
     for(let i = 1; i < blogsData.length; i++) {
         contentHTML += `<a href="blogs/${blogsData[i].link}" class="blog-card">
-                <img src="images/${blogsData[i].image}">
+                <img src="images/${blogsData[i].image}" alt="">
                 <div class="date">${blogsData[i].postDate.toLocaleDateString(undefined, {
             day: "numeric",
             month: "long",
@@ -28,7 +28,7 @@ const renderMainContent = function() {
     const firstBlog = blogsData[0]
 
     contentHTML += `<a href="${firstBlog.link}" class="lastest-blog" 
-                       style="background-image: url('./images/${firstBlog.image}');")>
+                       style="background-image: url('./images/${firstBlog.image}');">
                         <div class="date">${firstBlog.postDate.toLocaleDateString(undefined, {
                             day: "numeric",
                             month: "long",
