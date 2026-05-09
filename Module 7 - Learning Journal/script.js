@@ -20,6 +20,7 @@ const getBlogCardListHTML = function () {
             </a>`
     }
     return contentHTML + '</div>';
+
 }
 
 const renderMainContent = function() {
