@@ -50,6 +50,7 @@ const renderOrderList = function() {
                 </div>`
 }
 
+/* using Luhn algorithm to check if the card number is valid */
 const isValidCardNumber = function(cardNumberString) {
     if(cardNumberString.length !== 12) return false;
     try {
@@ -67,8 +68,9 @@ const isValidCardNumber = function(cardNumberString) {
     }
 }
 
-console.log(isValidCardNumber("23"))
+
 document.getElementById('app').addEventListener("click", event => {
+    /* check if add button is clicked. If yes add food to order list and render it */
     if(event.target.dataset.add) {
         thankYouPopup.style.display = 'none';
         const target = orderList.find(function(food){
@@ -78,10 +80,14 @@ document.getElementById('app').addEventListener("click", event => {
         else orderList.push({ uuid: event.target.dataset.add, numberOfOrders: 1 });
         renderOrderList()
     }
+
+    /* check if remove button is clicked. If yes add food to order list and render it */
     else if(event.target.dataset.remove) {
         orderList = orderList.filter(function(food){return food.uuid !== event.target.dataset.remove;});
         renderOrderList()
     }
+
+    /* check if complete button is clicked. If yes, show the pop-up to let customer enter necessary information */
    else if(event.target.id === 'complete-btn'){
        orderSection.style.pointerEvents = 'none'
        orderSection.style.opacity = '0.5'
@@ -90,6 +96,8 @@ document.getElementById('app').addEventListener("click", event => {
    }
 });
 
+/* I want it to be in universal listener but alas I don't know to add submit listener to it so, here we are
+/* it also check if entered card number is valid. if not form will not be submitted (I think?) */
 popUp.addEventListener('submit', event => {
     event.preventDefault()
     let data = new FormData(popUp)

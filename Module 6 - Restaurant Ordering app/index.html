@@ -11,20 +11,46 @@
 </head>
 <body>
     <div class="app" id="app">
+
+        <!-- the main application and it gets seperated from pop-up else opacity will influence pop-up too-->
         <section class="order-section" id="order-section">
+
+            <!-- I really want to use header tag for this one because, y'know, it is a header
+                but I have problem with background-image so, I use img tag which automatically resize -->
             <img src="images/header.png" class="app-header"
                  alt="Image of burger from Jimmy's Diner with tagline the best burgers and pizzas in town.">
+
+            <!-- this is where the menu card, which show food's name, ingredient and price, will be added to -->
             <menu id = "menu"></menu>
-        <div class="order-container" id="order-container">
-            <h1 class="order-header">Your Order</h1>
-            <div class="order-info" id="order-info"></div>
-            <button id="complete-btn">Complete Order</button>
-        </div>
+
+            <div class="order-container" id="order-container">
+                <h1 class="order-header">Your Order</h1>
+
+                <!-- -->
+                <div class="order-info" id="order-info"></div>
+                <button id="complete-btn">Complete Order</button>
+            </div>
+
+
+            <!-- A little card to show gratitude and notify customer that order is complete -->
+            <div class="thank-you-popup" id="thank-you-popup"></div>
         </section>
+
+        <!-- This popup only shows when the customer presses 'Complete' button otherwise it stays hidden -->
         <form class="card-details-popup" id="card-details-popup">
             <h1 class="card-details-popup-title">Enter card details</h1>
             <div class="input-list">
-                <input type="text" name="name" placeholder="Enter your name" aria-label="customer's name" required>
+
+                <!-- accept any character because we don't know what type of langauge user will use -->
+                <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        aria-label="customer's name"
+                        required
+                >
+
+                <!-- only accept 12-digits-long string as the length of valid card number-->
                 <input
                         type="text"
                         name="cardNumber"
@@ -33,6 +59,8 @@
                         pattern="[0-9]{12}"
                         required
                 >
+
+                <!-- only accept 3-to-4-digits-long string as the length of valid CCV-->
                 <input
                         type="text"
                         name="cvv"
@@ -44,7 +72,6 @@
             </div>
             <button id="pay-btn">Pay</button>
         </form>
-        <div class="thank-you-popup" id="thank-you-popup"></div>
     </div>
 </body>
 </html>
